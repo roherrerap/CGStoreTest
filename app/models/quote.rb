@@ -1,3 +1,3 @@
 class Quote < ApplicationRecord
-  has_many :productquote
+  has_many :productquotes
 end
