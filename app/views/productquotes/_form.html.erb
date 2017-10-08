@@ -1,0 +1,52 @@
+<%= form_with(model: productquote, local: true) do |form| %>
+  <% if productquote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(productquote.errors.count, "error") %> prohibited this productquote from being saved:</h2>
+
+      <ul>
+      <% productquote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, id: :productquote_quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :param1 %>
+    <%= form.number_field :param1, id: :productquote_param1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :param2 %>
+    <%= form.number_field :param2, id: :productquote_param2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :param3 %>
+    <%= form.text_field :param3, id: :productquote_param3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :param4 %>
+    <%= form.text_field :param4, id: :productquote_param4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.text_field :product_id, id: :productquote_product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quote_id %>
+    <%= form.text_field :quote_id, id: :productquote_quote_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

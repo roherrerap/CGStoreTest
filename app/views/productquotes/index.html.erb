@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Productquotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Param1</th>
+      <th>Param2</th>
+      <th>Param3</th>
+      <th>Param4</th>
+      <th>Product</th>
+      <th>Quote</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @productquotes.each do |productquote| %>
+      <tr>
+        <td><%= productquote.quantity %></td>
+        <td><%= productquote.param1 %></td>
+        <td><%= productquote.param2 %></td>
+        <td><%= productquote.param3 %></td>
+        <td><%= productquote.param4 %></td>
+        <td><%= productquote.product %></td>
+        <td><%= productquote.quote %></td>
+        <td><%= link_to 'Show', productquote %></td>
+        <td><%= link_to 'Edit', edit_productquote_path(productquote) %></td>
+        <td><%= link_to 'Destroy', productquote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Productquote', new_productquote_path %>

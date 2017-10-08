@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quantity: 1
+  param1: 1
+  param2: 1
+  param3: MyString
+  param4: MyString
+  product: one
+  quote: one
+
+two:
+  quantity: 1
+  param1: 1
+  param2: 1
+  param3: MyString
+  param4: MyString
+  product: two
+  quote: two

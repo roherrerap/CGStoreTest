@@ -23,7 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: Prueba_development
+  database: d39i5c2id8vknt
+  username: cujzlbbsxooryv
+  password: c0f1db622c22f8fb24813582dd095f5b82775a760e98f645efb475324925e22f
+  host: ec2-23-21-197-231.compute-1.amazonaws.com
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -80,6 +83,9 @@ test:
 #
 production:
   <<: *default
-  database: Prueba_production
-  username: Prueba
-  password: <%= ENV['PRUEBA_DATABASE_PASSWORD'] %>
+  host: ec2-23-21-197-231.compute-1.amazonaws.com
+  database: postgres://cujzlbbsxooryv:c0f1db622c22f8fb24813582dd095f5b82775a760e98f645efb475324925e22f@ec2-23-21-197-231.compute-1.amazonaws.com:5432/d39i5c2id8vknt
+  username: cujzlbbsxooryv
+  port: 5432
+  password: c0f1db622c22f8fb24813582dd095f5b82775a760e98f645efb475324925e22f
+  ssl: required
