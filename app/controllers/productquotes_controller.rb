@@ -1,4 +1,5 @@
 class ProductquotesController < ApplicationController
+  protect_from_forgery unless: -> { request.format.json? }
   before_action :set_productquote, only: [:show, :edit, :update, :destroy]
 
   # GET /productquotes
